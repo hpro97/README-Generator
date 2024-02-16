@@ -19,11 +19,6 @@ const questions = [
     },
     {
     type: "input",
-    name: "tableOfContents",
-    message: "Table of Contents:",
-    },
-    {
-    type: "input",
     name: "installation",
     message: "Installation instructions:",
     },
@@ -51,7 +46,7 @@ const questions = [
     {
     type: "input",
     name: "github",
-    message: "Where to ask questions (input your github username):",
+    message: "Input your github username:",
     },
     {
     type: "input",
@@ -74,7 +69,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const markdown = generateMarkdown(answers);
-        writeToFile("README.md", markdown);
+        writeToFile(`README ${data.title}.md`, markdown);
       });
   }
   
