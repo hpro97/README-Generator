@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data) { //input defined as data function creates markdown
   return `
   ## License
   
@@ -51,6 +51,12 @@ function generateMarkdown(data) {
 
 module.exports = generateMarkdown;
 
-//* When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled **License** that explains which license the application is covered under ✅
+//----------------------------------------------------------------------//
 
-//badges found here https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+//       notes:
+
+//${data.usage} //write to file in index.js specifies data, name: specifies more branch delving as per questions const
+//module.exports = generateMarkdown; //exports wrapped function for use in other files
+//badges found here https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba explaining line 9
+
+//----------------------------------------------------------------------//
