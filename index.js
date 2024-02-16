@@ -75,6 +75,8 @@ init(); //calls function
 
 // left to do:
 
+// workout why not working in command line (only in node)
+
 // submit to git:
 // video using from command line, showing example generated
 // sample readme

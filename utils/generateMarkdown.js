@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(data) { //input defined as data function creates markdown
+function generateMarkdown(data) { //input defined as data, function creates markdown
   return `
   ## License
   
