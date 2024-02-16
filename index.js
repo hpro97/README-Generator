@@ -1,94 +1,89 @@
 //git add . && git commit -m "message" && git push
 
 const fs = require("fs");
-const path = require('path');
+const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-    {
+  {
     type: "input",
     name: "title",
     message: "Title of project:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "description",
     message: "Description of project:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "installation",
     message: "Installation instructions:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "usage",
     message: "Usage instructions:",
-    },
-    {
+  },
+  {
     type: "list",
     name: "license",
     message: "License in use:",
-    choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', 'None'],
-    },
-    {
+    choices: ["MIT", "Apache_2.0", "GPLv3", "BSD_3"],
+  },
+  {
     type: "input",
     name: "contributing",
     message: "Contributing guidlines:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "tests",
     message: "Tests instructions:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "github",
     message: "Input your github username:",
-    },
-    {
+  },
+  {
     type: "input",
     name: "email",
     message: "What is your email address?",
-    },
-
-
+  },
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-        err ? console.error(err) : console.log("README created.");
-      });
-  }
-  
+  fs.writeFile(fileName, data, (err) => {
+    err ? console.error(err) : console.log("README created.");
+  });
+}
 
 // function to initialize program
 function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const markdown = generateMarkdown(answers);
-        writeToFile(`README ${data.title}.md`, markdown);
-      });
-  }
-  
+  inquirer.prompt(questions).then((answers) => {
+    const markdown = generateMarkdown(answers);
+    writeToFile(`README ${answers.title}.md`, markdown);
+  });
+}
 
 // function call to initialize program
 init();
 
-
 // * Create a command-line application that accepts user input.
 //   * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
-//     * The title of my project 
+//     * The title of my project
 //     * Sections entitled:
-//       * Description 
-//       * Table of Contents 
-//       * Installation 
-//       * Usage 
-//       * License 
-//       * Contributing 
-//       * Tests 
+//       * Description
+//       * Table of Contents
+//       * Installation
+//       * Usage
+//       * License
+//       * Contributing
+//       * Tests
 //       * Questions
 //     * When a user enters the project title then it is displayed as the title of the README
 //     * When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
