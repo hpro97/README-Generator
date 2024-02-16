@@ -64,12 +64,21 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-}
+    fs.writeFile(fileName, data, (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("README created.");
+      }
+    });
+  }
+  
 
 // function to initialize program
 function init() {
 
-}
+  }
+  
 
 // function call to initialize program
 init();
