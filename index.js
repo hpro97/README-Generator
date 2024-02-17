@@ -73,17 +73,4 @@ function init() {
 // function call to initialize program
 init(); //calls function
 
-// left to do:
-
-// submit to git:
-// video using from command line, showing example generated
-// sample readme
-
-// submit to boot:
-// link to vid
-// link to git
-// link to index and genmark
-// link to example readme detailing project
-
-
 //enquirer details: https://www.npmjs.com/package/inquirer
