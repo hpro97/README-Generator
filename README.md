@@ -15,7 +15,7 @@
 
 <a href="https://app.screencastify.com/v3/watch/sL4RXgNnRSYMMGl26wSV">Ye Olde' Video Demo</a>.
 
-  *bear in mind this README was generated with the help of AI for test functionality*
+  *bear in mind this README was generated with the help of AI for test functionality, demonstrating correct functionality of README compilation in extreme edge cases*
   
   - Arr matey! The Professional README Generator be a command line application crafted to simplify the process of creatin' a fine README.md file for open-source projects on GitHub. When the application be set sail with the command 'node index.js', users be prompted to furnish various descriptive details about their project, as if navigatin' through treacherous waters. The application doth dynamically generate a professional README file based on the user's input, utilizing the Inquirer package for an interactive and user-friendly experience, akin to a ship's crew workin' in harmony on the high seas. The engendered README file doth include essential sections such as Title, Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions 
   
